@@ -55,7 +55,7 @@ function ProductScreen({ match }) {
                                 </Row>
                             </ListGroup.Item>
                             <ListGroup.Item className="d-grid ">
-                                <Button type="button">Add TO Cart</Button>
+                                <Button type="button" disabled={product.countInStock === 0}>Add TO Cart</Button>
                             </ListGroup.Item>
                         </ListGroup >
                     </Card>
