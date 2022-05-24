@@ -5,7 +5,7 @@ function Footer() {
         <div>
             <Container className='text-center fw-bold'>
 
-                Copyrighr &copy; UI-Shop
+                Copyright &copy; UI-Shop
             </Container >
         </div>
     )

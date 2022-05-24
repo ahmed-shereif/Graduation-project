@@ -1,25 +1,26 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import Rating from '../components/Rating'
 
 function Product({ product }) {
     return (
         <div>
             <Card style={{ width: '18rem' }} className="my-2">
-                <a href={`product/${product._id}`}>
+                <Link to={`product/${product._id}`}>
                     <Card.Img variant="top" src={product.image} />
-                </a>
+                </Link>
                 <Card.Body>
-                    <a href={`product/${product._id}`} style={{ textDecoration: "none" }}>
+                    <Link to={`product/${product._id}`} style={{ textDecoration: "none" }}>
                         <Card.Title as='div' style={{ height: '60px' }}>
                             <strong>
                                 {product.name}
                             </strong>
                         </Card.Title>
-                    </a>
+                    </Link>
 
 
-                    <Card.Text>
+                    <Card.Text as='div'>
                         <Rating value={product.rating}
                             text={`${product.numReviews} reviews`}
                             color={'#F9DB18'}
