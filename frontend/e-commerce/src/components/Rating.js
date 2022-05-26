@@ -6,7 +6,7 @@ function Rating({ value, text, color }) {
 
 
     function drawStars() {
-        let fullStars = Array(5).fill(<i className="fa-solid fa-star" ></i>)
+        let fullStars = Array(5).fill(<i key={uuidv4()} className="fa-solid fa-star" ></i>)
 
         fullStars.map((star, index) => {
             let current = index + 1
