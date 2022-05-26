@@ -4,9 +4,11 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import connectDb from './config/db.js'
 import colors from 'colors'
+import productRoutes from './routes/productRoute.js'
+import { notFound, errorHandler } from './middleware/errormiddleWare.js'
 
+dotenv.config({ path: '../config.env' })
 
-dotenv.config()
 
 connectDb();
 const app = express();
@@ -16,18 +18,14 @@ app.use(cors({
     origin: 'http://localhost:3000'
 }))
 
-let data = JSON.stringify(products)
+//when ever the route starts with 'api/products/ link to productRoutes
+app.use('/api/products', productRoutes)
 
 
-app.get('/api/products', (req, res) => {
-    res.json(products)
-})
+app.use(notFound);
+app.use(errorHandler);
 
-app.get('/api/products/:id', (req, res) => {
-    console.log('☂', req.params.id)
-    let product = products.find(p => p._id === req.params.id)
-    res.json(product)
-})
+
 
 const port = process.env.PORT || 5000;
 

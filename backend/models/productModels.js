@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const validator = require('validator');
+import validator from 'validator'
 
 
 const reviewSchema = mongoose.Schema({
@@ -22,7 +22,7 @@ const reviewSchema = mongoose.Schema({
 
 const productSchema = mongoose.Schema({
     user: {
-        type: mongoose.Schema.Type.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: "user"
     },

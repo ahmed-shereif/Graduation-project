@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
 
-const validator = require('validator');
 
 const orderSchema = mongoose.Schema({
     user: {
@@ -14,7 +13,7 @@ const orderSchema = mongoose.Schema({
         image: { type: String, required: true },
         price: { type: Number, required: true },
         product: {
-            type: mongoose.Schema.Type.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             required: true,
             ref: 'Product'
         },
