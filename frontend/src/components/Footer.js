@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap'
 function Footer() {
     return (
         <div>
-            <Container className='text-center fw-bold'>
+            <Container className='text-center fw-bold' >
 
                 Copyright &copy; UI-Shop
             </Container >

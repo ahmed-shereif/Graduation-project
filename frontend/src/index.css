@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+h1{
+  font-size: 1.8rem;
+  padding:1rem 0;
+}
+
+h2{
+  font-size: 1.4rem;
+  padding:0.5rem 0;
+}
+
+h3{
+  font-size: 1rem;
+  padding:0.2rem 0;
+}
+
+.trash{
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.4);
+}
+.trash:hover{
+  color:rgb(200, 22, 22);
+  transform: scale(1.6);
+
+}
