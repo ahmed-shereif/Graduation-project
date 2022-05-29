@@ -1,11 +1,12 @@
+import 'dotenv/config'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 
-dotenv.config({ path: '../../config.env' })
+
 
 const connectDb = async () => {
     try {
-        const connect = await mongoose.connect(`mongodb+srv://ahmedSherif:225588@cluster0.dqjgxvg.mongodb.net/ui-store?retryWrites=true&w=majority`, {
+        const connect = await mongoose.connect(process.env.MONGO_URI, {
 
             useUnifiedTopology: true,
 
