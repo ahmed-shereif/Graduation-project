@@ -16,7 +16,7 @@ function App() {
           <Container className="my-4">
             <Routes>
               <Route path="/" element={<HomeScreens />} />
-              <Route path="/:product/:id" element={<ProductScreen />} />
+              <Route path="/product/:id" element={<ProductScreen />} />
             </Routes>
           </Container>
         </main>
