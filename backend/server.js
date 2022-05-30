@@ -4,13 +4,16 @@ import products from './data/products.js'
 import cors from 'cors'
 import connectDb from './config/db.js'
 import colors from 'colors'
-import productRoutes from './routes/productRoute.js'
+import productRoutes from './routes/productRoutes.js'
+import userRoutes from './routes/userRoutes.js'
 import { notFound, errorHandler } from './middleware/errormiddleWare.js'
 
 
 
 connectDb();
 const app = express();
+
+app.use(express.json())
 
 
 app.use(cors({
@@ -19,6 +22,7 @@ app.use(cors({
 
 //when ever the route starts with 'api/products/ link to productRoutes
 app.use('/api/products', productRoutes)
+app.use('/api/users', userRoutes)
 
 
 app.use(notFound);

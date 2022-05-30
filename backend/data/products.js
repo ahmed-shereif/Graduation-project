@@ -77,5 +77,5 @@ const products = [
     numReviews: 12,
   },
 ]
-console.log('💁‍♂️', JSON.stringify(products))
+
 export default products
