@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+
+  
+}
+
+main{
+  min-height: 75vh;
 }
 
 code {
@@ -27,11 +34,15 @@ h3{
 }
 
 .trash{
-  transition: all 0.5s ease-in-out;
+  transition: all 0.1s ease-in-out;
   transform: scale(1.4);
+padding:4px 20px;
 }
 .trash:hover{
   color:rgb(200, 22, 22);
   transform: scale(1.6);
 
+}
+a{
+  text-decoration: none;
 }
